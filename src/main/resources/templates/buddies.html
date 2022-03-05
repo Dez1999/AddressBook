@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h1>Address Book</h1>
+    <div>
+        <table class="table table-borderless">
+            <thead>
+            <tr>
+                <th>Action</th>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+            </tr>
+            </thead>
+            <th:block th:each="buddy : ${listBuddies}">
+                <tr>
+                    <td>
+                        <a class="h5 mb-1" th:href="@{'/buddies/edit/' + ${buddy.id}}">Edit</a>
+                        <a class="h5 mb-1" th:href="@{'/buddies/delete/' + ${buddy.id}}">Delete</a>
+                    </td>
+                    <td>[[${buddy.id}]]</td>
+                    <td>[[${buddy.firstName}]]</td>
+                    <td>[[${buddy.lastName}]]</td>
+                    <td>[[${buddy.phoneNumber}]]</td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+    <div>
+        <a class="h2" th:href="@{/buddies/add}">Add Buddy</a>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
