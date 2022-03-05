@@ -8,3 +8,9 @@ To run the application:
 3) Start the mySQL server
 4) Run the application from AddressBookApp Class (main spring class)
 5) Open localhost:8080/buddies to display the AddressBook
+
+
+
+
+Key Links for Lab:
+CircleCi: https://app.circleci.com/pipelines/github/Dez1999
