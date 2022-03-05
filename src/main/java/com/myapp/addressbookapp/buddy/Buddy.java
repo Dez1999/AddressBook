@@ -25,6 +25,9 @@ public class Buddy {
     @Column(nullable = false)
     private String phoneNumber;
 
+    @Column(nullable = true)
+    private String address;
+
     public Integer getId() {
         return id;
     }
@@ -55,6 +58,14 @@ public class Buddy {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
